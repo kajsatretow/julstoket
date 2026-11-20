@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="sv"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#173d30"><meta name="apple-mobile-web-app-capable" content="yes">
+<title>Julstöket</title><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><link rel="stylesheet" href="style.css">
+<header><div class="wrap"><span class="star" aria-hidden="true">✦</span><h1>Julstöket</h1></div></header>
+<main class="wrap">
+<nav aria-label="Vyer"><button data-view="Inköp">Inköp</button><button data-view="Uppgifter">Uppgifter</button><button data-view="Idéer">Idéer</button><button data-view="Tidsplan">Tidsplan</button></nav>
+<div class="bar"><div><h2 id="heading"></h2><div id="count"></div></div><button class="primary" id="add">+ Lägg till</button></div>
+<p id="status" role="status" hidden></p><div id="list"></div>
+<footer><button id="export">Exportera backup</button><button id="import">Importera backup</button><input id="file" type="file" accept=".json,application/json" hidden><button id="install" hidden>Installera appen</button><p>Sparas i den här webbläsaren.</p></footer>
+</main>
+<dialog id="editor"><form id="form"><h2 id="editTitle"></h2>
+<label>Namn<input name="title" required maxlength="160"></label>
+<label>Lista<select name="category"><option>Inköp</option><option>Uppgifter</option><option>Idéer</option></select></label>
+<label>Datum<input name="date" type="date"></label>
+<label>Anteckning<textarea name="note" rows="3" maxlength="1200"></textarea></label>
+<div class="actions"><button type="button" id="remove">Radera</button><button type="button" id="close">Avbryt</button><button class="primary">Spara</button></div></form></dialog>
+<script type="module" src="app.js"></script></html>
